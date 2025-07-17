@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Pull Request Simulator</title>
+ </head>
+<body>
+  <div class="container">
+    <h1>Simulate a GitHub Pull Request</h1>
+    
+    <p><strong>Branch:</strong> <code>feature/add-welcome</code></p>
+
+    <div class="code-block code-removed">
+      - console.log("Hello, world!");
+    </div>
+    <div class="code-block">
+      + console.log("Welcome to our app!");
+    </div>
+
+    <button class="button" id="createPR">Create Pull Request</button>
+
+    <div id="prView" class="pr-box" style="display: none;">
+      <h2>Pull Request: Add welcome message</h2>
+      <p>This PR updates the console log message to greet the user.</p>
+
+      <p><strong>Changes:</strong></p>
+      <div class="code-block code-removed">
+        - console.log("Hello, world!");
+      </div>
+      <div class="code-block">
+        + console.log("Welcome to our app!");
+      </div>
+
+      <button class="button" id="mergePR">Merge Pull Request</button>
+    </div>
+
+    <p id="mergeMsg" class="merged" style="display:none;">✅ Pull Request successfully merged into <code>main</code>!</p>
+  </div>
+
+  <script>
+    const createPR = document.getElementById("createPR");
+    const prView = document.getElementById("prView");
+    const mergePR = document.getElementById("mergePR");
+    const mergeMsg = document.getElementById("mergeMsg");
+
+    createPR.onclick = () => {
+      prView.style.display = "block";
+      createPR.disabled = true;
+      createPR.innerText = "Pull Request Created";
+    };
+
+    mergePR.onclick = () => {
+      mergeMsg.style.display = "block";
+      mergePR.disabled = true;
+      mergePR.innerText = "Merged";
+    };
+  </script>
+</body>
+</html>
