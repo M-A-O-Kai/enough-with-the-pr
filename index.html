@@ -3,6 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>GitHub Pull Request Simulator</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #24292e;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .code-block {
+      background: #f6f8fa;
+      border-left: 4px solid #2cbe4e;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .code-removed {
+      border-left-color: #d73a49;
+      background: #ffeef0;
+    }
+
+    .button {
+      background: #2da44e;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #218739;
+    }
+
+    .pr-box {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    .merged {
+      color: #8250df;
+      font-weight: bold;
+    }
+  </style>
  </head>
 <body>
   <div class="container">
